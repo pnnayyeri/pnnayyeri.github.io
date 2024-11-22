@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pooyan Nayyeri - Personal Webpage</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
@@ -23,6 +24,7 @@
       line-height: 1.6;
       background-color: #f4f4f9;
       color: #333;
+      padding-top: 60px; /* Adjust the value depending on navbar height */
     }
     a {
       text-decoration: none;
@@ -40,6 +42,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed; /* Make the navbar fixed at the top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Ensures the navbar stays on top of other content */
     }
     nav .brand {
       font-size: 1.5rem;
