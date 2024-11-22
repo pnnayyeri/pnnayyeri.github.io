@@ -1,79 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Pooyan Nayyeri's Personal Webpage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooyan Nayyeri - Personal Webpage</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-  * {
-    box-sizing: border-box;
-  }
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  .row {
-    display: flex;
-  }
+    /* Navbar */
+    nav {
+      background: #007bff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .brand {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      padding: 5px 10px;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
 
-  /* Create two equal columns that sits next to each other */
-  .column {
-  float: left;
-  }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #007bff, #0056b3);
+      color: #fff;
+    }
+    .hero img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+    }
+    .hero p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
 
-  .left {
-    width: 30%;
-    padding: 0px 36px 36px 36px;
-  }
+    /* Portfolio Section */
+    .portfolio {
+      padding: 50px 20px;
+    }
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+    .portfolio-item img {
+      border-radius: 8px;
+    }
+    .portfolio-item h3 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+    .portfolio-item p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0 20px;
+    }
+    .portfolio-item a {
+      display: inline-block;
+      color: #007bff;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-  .right {
-    width: 70%;
-    padding: 0px 10px 10px 10px;
-  }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer .social-links a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    footer .social-links a:hover {
+      color: #007bff;
+    }
   </style>
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">Pooyan Nayyeri</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="./index.html">Home</a></li>
+  
+  <!-- Navbar -->
+  <nav>
+    <div class="brand">Pooyan Nayyeri</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="https://scholar.google.com/citations?user=db3gyOoAAAAJ&hl=en" target="_blank">Publications</a></li>
-      <!--
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="./ebooks.html">My Tutorial eBooks</a></li>
-
-        </ul>
-      </li>
-      -->
-      <li><a href="./ebooks.html">My Tutorial eBooks (FREE!)</a></li>
-      <li><a href="./contact_me.html">Contact Me</a></li>
-      <!--<li><a href="./about_me.html">About Me</a></li>-->
+      <li><a href="./ebooks.html" class="active">eBooks</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/pooyan_nayyeri.jpg" alt="Pooyan Nayyeri">
+    <h1>Pooyan Nayyeri</h1>
+    <p>Research & Development Lead | Mechanical Engineer | Robotics and Mechatronics</p><br>
+    <p>I am a Research and Development Lead specializing in mechanical design, automation, and additive manufacturing.</p>
+    <p>With a PhD in Mechanical Engineering and years of experience, I focus on creating innovative solutions for both
+      academic and industrial challenges.</p>
+  </section>
 
-<div>
-  <div class="row">
-    <div class="column left">
-      <img src="images/pooyan_nayyeri.jpg" width="100%" padding-right="16px">
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <!-- Example Project 1 -->
+      <div class="portfolio-item">
+        <img src="images/project1.jpg" alt="Project 1">
+        <h3>Vertical Gantry System</h3>
+        <p>Designed a motorized system with active feedback control for automated item handling in manufacturing.</p>
+        <a href="#">Read More</a>
+      </div>
+      
+      <!-- Example Project 2 -->
+      <div class="portfolio-item">
+        <img src="images/project2.jpg" alt="Project 2">
+        <h3>3D Printed Jet Engine Model</h3>
+        <p>Developed a realistic jet engine model with hardware kits for assembly and functional demonstrations.</p>
+        <a href="#">Read More</a>
+      </div>
+      
+      <!-- Example Project 3 -->
+      <div class="portfolio-item">
+        <img src="images/project3.jpg" alt="Project 3">
+        <h3>Nonplanar Slicing Research</h3>
+        <p>Conducted research to enhance mechanical properties of 3D printed parts through nonplanar slicing techniques.</p>
+        <a href="#">Read More</a>
+      </div>
     </div>
-    <div class="column right">
-      <h3>Welcome to my personal webpage</h3><br>
-      <p>My name is Nayyeri, Pooyan Nayyeri.</p>
-      <p>This page will be completed gradually...</p>
-      <p>Over and Out.</p>
-    </div>
-  </div>
-</div>
+  </section>
 
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Get in Touch</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/pooyan-nayyeri" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <!--<a href="mailto:pooyan.nayyeri@example.com"><i class="fas fa-envelope"></i></a>-->
+      <a href="https://github.com/pooyan-nayyeri" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2024 Pooyan Nayyeri</p>
+  </footer>
 
 </body>
 </html>
