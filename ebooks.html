@@ -1,90 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Pooyan Nayyeri's Personal Webpage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Free eBooks - Pooyan Nayyeri</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-  * {
-    box-sizing: border-box;
-  }
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  .row {
-    display: flex;
-  }
+    /* Navbar */
+    nav {
+      background: #007bff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .brand {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      padding: 5px 10px;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
 
-  /* Create two equal columns that sits next to each other */
-  .column {
-  float: left;
-  }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #007bff, #0056b3);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
 
-  .left {
-    width: 30%;
-    padding: 0px 48px 48px 48px;
-  }
+    /* E-books Section */
+    .ebooks {
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .ebook {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .ebook img {
+      width: 100%;
+      height: auto;
+    }
+    .ebook h3 {
+      margin: 20px 10px 10px;
+      font-size: 1.2rem;
+    }
+    .ebook p {
+      margin: 10px 10px 20px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .ebook a {
+      color: #007bff;
+      font-weight: bold;
+    }
 
-  .right {
-    width: 70%;
-    padding: 0px 10px 10px 10px;
-  }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer .social-links a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    footer .social-links a:hover {
+      color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .ebooks {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">Pooyan Nayyeri</a>
-    </div>
-    <ul class="nav navbar-nav">
+  
+  <!-- Navbar -->
+  <nav>
+    <div class="brand">Pooyan Nayyeri</div>
+    <ul>
       <li><a href="./index.html">Home</a></li>
+      <li><a href="./index.html/#portfolio">Portfolio</a></li>
       <li><a href="https://scholar.google.com/citations?user=db3gyOoAAAAJ&hl=en" target="_blank">Publications</a></li>
-      <!--
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="./ebooks.html">My Tutorial eBooks</a></li>
-
-        </ul>
-      </li>
-      -->
-      <li class="active"><a href="./ebooks.html">My Tutorial eBooks (FREE!)</a></li>
-      <li><a href="./contact_me.html">Contact Me</a></li>
-      <!--<li><a href="./about_me.html">About Me</a></li>-->
+      <li><a href="./ebooks.html" class="active">eBooks</a></li>
+      <li><a href="./index.html/#contact">Contact</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>My Free eBooks</h1>
+    <p>Discover my free resources on programming, control engineering, and more.</p>
+  </section>
 
-<div>
-  <div class="row">
-    <div class="column left">
-      <a href="./contents/labview_book_en.pdf" target="_blank"><img src="images/labview_book.jpg" width="100%"></a>
-    </div>
-    <div class="column right">
+  <!-- E-books Section -->
+  <section class="ebooks">
+    <!-- First eBook -->
+    <div class="ebook">
+      <a href="./contents/labview_book_en.pdf" target="_blank">
+        <img src="images/labview_book.jpg" alt="LabVIEW eBook">
+      </a>
       <h3><a href="./contents/labview_book_en.pdf" target="_blank">Programming Lego MINDSTORMS Robots using LabVIEW</a></h3>
-      <h3 dir="rtl" align="left"><a href="./contents/labview_book.pdf" target="_blank">برنامه‌نویسی ربات‌های لگو ماینداستورمز با استفاده از نرم‌افزار لب‌ویو</a></h3>
+      <p>Available in both <a href="./contents/labview_book.pdf" target="_blank">Persian</a> and <a href="./contents/labview_book_en.pdf" target="_blank">English</a>.</p>
+    </div>
 
-      <p>In <a href="./contents/labview_book.pdf" target="_blank">Persian</a> and <a href="./contents/labview_book_en.pdf" target="_blank">English</a></p><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column left">
-      <a href="./contents/control_book.pdf" target="_blank"><img src="images/control_book.jpg" width="100%"></a>
-    </div>
-    <div class="column right">
+    <!-- Second eBook -->
+    <div class="ebook">
+      <a href="./contents/control_book.pdf" target="_blank">
+        <img src="images/control_book.jpg" alt="Control Engineering eBook">
+      </a>
       <h3><a href="./contents/control_book.pdf" target="_blank">Control Engineering Problems in Mechanical Engineering</a></h3>
-      <h3><a href="./contents/control_book.pdf" target="_blank">(چند مسئله از مهندسی کنترل در متلب و سیمولینک برای رشته‌ی مهندسی مکانیک)</a></h3>
-      <p>Translated to Persian with collaboration of my friend, <a href="https://sites.google.com/view/arman-mohammadi/home" target="_blank">Arman Mohammadi</a></p>
-      <p>The <a href='https://ctms.engin.umich.edu/CTMS/index.php?aux=Home' target="_blank">source</a> is in English.</p><br>
+      <p>Translated to Persian with collaboration of <a href="https://sites.google.com/view/arman-mohammadi/home" target="_blank">Arman Mohammadi</a>. Original <a href='https://ctms.engin.umich.edu/CTMS/index.php?aux=Home' target="_blank">source</a> in English.</p>
     </div>
-  </div>
-</div>
+  </section>
 
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Get in Touch</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/pooyan-nayyeri" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <!--<a href="mailto:pooyan.nayyeri@example.com"><i class="fas fa-envelope"></i></a>-->
+      <a href="https://github.com/pooyan-nayyeri" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2024 Pooyan Nayyeri</p>
+  </footer>
 
 </body>
 </html>
